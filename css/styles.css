@@ -1,0 +1,31 @@
+:root {
+  --black: #000;
+  --white: #fff;
+  --red: #de1f0d;
+  --yellow: #f5c802;
+  --grey: #d3cfd4;
+}
+
+body {
+  font-family: 'Averia Sans Libre';
+  font-weight: 300;
+  background-image: url(../img/background.png);
+}
+
+nav {
+  background-color: var(--grey);
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-search {
+  flex-grow: 0.2;
+  align-self: center;
+  align-content: stretch;
+  max-width: 300px;
+  height: 30px;
+}
+
+h1 {
+  text-align: center;
+}

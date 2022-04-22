@@ -1,6 +1,8 @@
-//Array contains Pokemon data to display in application
 //Each object represents one Pokemon with respective properties
-let pokemonList = [{
+
+let pokemonRepository = (function () {
+
+  let pokemonList = [{
         name: 'Pikachu',
         height: 0.4,
         type: ['electric', 'ground', 'steel', 'flying']
@@ -15,12 +17,45 @@ let pokemonList = [{
         height: 1.6,
         type: ['electric', 'grass', 'dragon', 'ghost', 'bug']
     }
-];
+]
 
-//Loop lists each Pokemon in array by assigning name and height keys
-for (let i = 0; i < pokemonList.length; i++) {
-    document.write(pokemonList[i].name + ' (height: ' + pokemonList[i].height + ') ' + '<br>')
+
+// Return all Pokemons
+
+function getAll (){
+  return pokemonList;
 }
+
+//Add new Pokemon to list
+
+function add (pokemon) {
+  if (typeof pokemon === 'object' &&
+    Object.keys(pokemonList).some(key => key === 'name') &&
+    Object.keys(pokemonList).some(key => key === 'height') &&
+    Object.keys(pokemonList).some(key => key === 'type')
+    ){
+       pokemonList.push(pokemon);
+} else {
+  alert('Please select a Pokemon.');
+}
+}
+
+ return {
+   getAll: getAll,
+   add: add
+ };
+
+})();
+
+
+
+//Displays Pokemon list with properties
+
+pokemonList.forEach(function getAll(pokemonList) {
+  document.write(pokemonList.name + '<br>'+ 'Height: ' + pokemonList.height + '<br>' + 'Type: ' + pokemonList.type + '<p>')
+});
+
+
 
 //Conditionals within loop evaluate height of each Pokemon
 

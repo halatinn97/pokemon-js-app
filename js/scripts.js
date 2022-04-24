@@ -40,9 +40,31 @@ function add (pokemon) {
 }
 }
 
+//Buttons to evoke Pokemon names
+
+function addListItem(pokemon) {
+ let pokemonListUl = document.querySelector('.pokemon-list');
+ let listItem = document.createElement('li');
+ let button = document.createElement('button');
+ button.innerText = pokemon.name;
+ button.classList.add('pokemon-button');
+ listItem.appendChild(button);
+ pokemonListUl.appendChild(listItem);
+ button.addEventListener('click', function (){
+   showDetails(pokemon);
+ });
+}
+
+function showDetails(pokemon) {
+  console.log(pokemon);
+}
+
+//Returns all necessary functions
+
  return {
    getAll: getAll,
-   add: add
+   add: add,
+   addListItem: addListItem
  };
 
 
@@ -50,6 +72,6 @@ function add (pokemon) {
 
 //Displays Pokemon list with properties
 
-pokemonRepository.getAll().forEach(function getAll(pokemonList) {
-  document.write(pokemonList.name + '<br>'+ 'Height: ' + pokemonList.height + '<br>' + 'Type: ' + pokemonList.type + '<p>');
+pokemonRepository.getAll().forEach(function (pokemon) {
+pokemonRepository.addListItem(pokemon)
 });

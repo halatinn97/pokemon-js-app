@@ -29,3 +29,15 @@ nav {
 h1 {
   text-align: center;
 }
+
+
+.pokemon-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+.pokemon-button {
+  background-color: var(--red);
+}

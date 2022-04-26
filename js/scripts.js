@@ -2,23 +2,8 @@
 
 let pokemonRepository = (function () {
 
-  let pokemonList = [{
-        name: 'Pikachu',
-        height: 0.4,
-        type: ['electric', 'ground', 'steel', 'flying']
-    },
-    {
-        name: 'Charmeleon',
-        height: 1.1,
-        type: ['ground', 'rock', 'water']
-    },
-    {
-        name: 'Slowbro',
-        height: 1.6,
-        type: ['electric', 'grass', 'dragon', 'ghost', 'bug']
-    }
-];
-
+  let pokemonList = [];
+  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 
 // Return all Pokemons
 

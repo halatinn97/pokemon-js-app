@@ -2,6 +2,7 @@
   --black: #000;
   --white: #fff;
   --red: #de1f0d;
+  --orange: #ff3b21;
   --yellow: #f5c802;
   --lightYellow: #f7de4f;
   --grey: #d3cfd4;
@@ -49,6 +50,13 @@ h1 {
   text-align: center;
   border-radius: 1.1875rem;
   padding: 2em 3em;
+}
+
+.pokemon-button:hover, .pokemon-button:focus {
+  cursor: pointer;
+  transition-duration: 0.8s;
+  transition-property: background-color, transform;
+  filter: brightness(180%);
 }
 
 
@@ -104,6 +112,10 @@ h1 {
 
 #modal-container.is-visible {
   display: flex;
+}
+
+#show-modal {
+  visibility: hidden;
 }
 
 .modal button {

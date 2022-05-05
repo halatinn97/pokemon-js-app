@@ -34,12 +34,27 @@ button.btn.btn-primary {
   cursor: pointer;
 }
 
-.close {
-  margin-left: 100px;
+.btn-secondary:hover, .btn-secondary:focus {
+  transition-duration: 0.8s;
+  transition-property: background-color, transform;
+  filter: brightness(180%);
+  outline-style: none;
 }
+
+button.close {
+  outline-style: none;
+}
+
 
 #modalContainer {
   text-align: center;
+}
+
+
+.modal-header {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row-reverse;
 }
 
 .modal-dialog {
@@ -47,6 +62,8 @@ button.btn.btn-primary {
   background: var(--lightYellow);
   border: var(--red) 5px solid;
 }
+
+
 
 .modal img {
   float: center;

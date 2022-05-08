@@ -1,0 +1,147 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.12,
+* Autoprefixer: v10.4.4
+* Browsers: last 2 version
+*/
+
+.heading {
+  margin-right: auto;
+}
+
+body {
+  font-family: "Averia Sans Libre";
+  font-weight: 300;
+  background-image: url(../img/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: undefined;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+h1 {
+  text-align: center;
+}
+
+button.btn.btn-primary {
+  visibility: hidden;
+}
+
+/*li*/
+.btn-secondary {
+  background-color: undefined;
+  width: 100%;
+  text-align: center;
+  border-radius: 1.1875rem;
+  padding: 2em 7em;
+  cursor: pointer;
+  color: undefined;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+  -webkit-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+  -webkit-transition-property: background-color, -webkit-transform;
+  transition-property: background-color, -webkit-transform;
+  transition-property: background-color, transform;
+  transition-property: background-color, transform, -webkit-transform;
+  -webkit-filter: brightness(180%);
+          filter: brightness(180%);
+  outline-style: none;
+}
+
+button.close {
+  outline-style: none;
+}
+
+.btn-outline-success {
+  color: undefined;
+  border-color: undefined;
+  background-color: undefined;
+}
+
+.btn-outline-success:hover {
+  background-color: undefined;
+  border-color: undefined;
+}
+
+.btn-outline-success:focus {
+  background-color: undefined;
+  border-color: undefined;
+}
+
+#modalContainer {
+  text-align: center;
+}
+
+.welcome-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: undefined;
+  outline: undefined;
+  padding: 2em;
+}
+
+.welcome-image {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  height: 70%;
+  width: 25%;
+}
+
+.welcome-message {
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.modal-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  border-bottom: undefined;
+}
+
+.modal-dialog {
+  background: none;
+}
+
+.modal-content {
+  background: undefined;
+  border-color: undefined;
+}
+
+.modal-footer {
+  border-top: none;
+}
+
+.modal img {
+  float: center;
+}
+
+.list-group-item {
+  background-color: initial;
+  border: 0px;
+}
+
+@media screen and (max-width: 320px) {
+  body {
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+  }
+}

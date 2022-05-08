@@ -5,31 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokédex App</title>
     <link rel="shortcut icon" type="img/png" href="img/favicon.png">
-    <link rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css"
-    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
-    crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Averia+Sans+Libre:wght@300&family=Raleway:wght@700&display=swap" rel="stylesheet">
     <!--<link rel="stylesheet" href="css/style.production.css" type="text/css"> -->
   </head>
+
   <body>
     <header>
+  <!-- Navbar -->
       <nav class="navbar navbar-light bg-light">
         <a class="navbar-brand" href="index.html">
           <img class="d-inline-block align-top" src="img/logo.png" alt="Page logo shows a Pokemon ball"
                     width="100" height="100">
         </a>
+        <h1 class="heading">Pokédex</h1>
+  <!-- Search bar -->
         <form class="form-inline">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          <input class="form-control mr-sm-2" id ="search-bar" onkeyup="pokemonRepository.searchFunction()"
+          placeholder="Search Pokémon..." type="search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" id="search-button" type="button">Search</button>
         </form>
       </nav>
-
     </header>
-
-    <h1>Pokédex</h1>
-
 
     <!-- Button trigger modal -->
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#pokeModal">
@@ -43,7 +42,7 @@
             <button type="button" class="close" data-toggle="modal"  data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
-            <h5 class="modal-title" id="modalTitle"</h5>
+            <h5 class="modal-title" id="modalTitle"></h5>
           </div>
           <div class="modal-body">
           </div>
@@ -52,11 +51,18 @@
       </div>
     </div>
 
-  <div class="container">
-    <div class="row d-flex justify-content-center">
-    <ul class="list-group" data-toggle="modal" data-target="pokeModal"></ul>
-</div>
-</div>
+<!-- Website description -->
+    <div class="container">
+      <div class="row d-flex justify-content-center">
+        <div class="welcome-box">
+          <img class="welcome-image" src="img/welcome-image.png" alt="Pokemon slogan that reads: Gotta catch them all!">
+          <p class="welcome-message">Find your favorite Pokémon by browsing through the red Pokémon buttons
+             or do a quick search by name. Click the red buttons to find out all
+             you need to know about your Pokémon's key characteristics!</p>
+        </div>
+      <ul class="list-group" data-toggle="modal" data-target="pokeModal"></ul>
+  </div>
+  </div>
 
     <script
     src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -73,4 +79,4 @@
     <script src="js/scripts.js"></script>
 
   </body>
-  </html>
+</html>

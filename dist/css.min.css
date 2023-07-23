@@ -1,1 +1,134 @@
-:root{--black:#000;--white:#fff;--red:#de1f0d;--orange:#ff3b21;--yellow:#f5c802;--lightYellow:#f7de4f;--grey:#d3cfd4}.heading{margin-right:auto}body{font-family:"Averia Sans Libre";font-weight:300;background-image:url(../img/background.jpg);background-repeat:no-repeat;background-size:cover;background-color:var(--lightYellow);background-position:center center;background-attachment:fixed}h1{text-align:center}button.btn.btn-primary{visibility:hidden}.btn-secondary{background-color:var(--red);width:100%;text-align:center;border-radius:1.1875rem;padding:2em 7em;cursor:pointer;color:var(--black)}.btn-secondary:focus,.btn-secondary:hover{transition-duration:.8s;transition-property:background-color,transform;filter:brightness(180%);outline-style:none}button.close{outline-style:none}.btn-outline-success{color:var(--red);border-color:var(--black);background-color:var(--grey)}.btn-outline-success:focus,.btn-outline-success:hover{background-color:var(--red);border-color:var(--black)}#modalContainer{text-align:center}.welcome-box{display:flex;flex-direction:column;background:var(--grey);outline:2px solid var(--black);padding:2em}.welcome-image{align-self:center;height:70%;width:25%}.welcome-message{text-align:center;font-size:1.2em}.modal-header{display:flex;align-items:flex-start;flex-direction:row-reverse;border-bottom:2px solid var(--red)}.modal-dialog{background:0 0}.modal-content{background:var(--lightYellow);border-color:var(--red)}.modal-footer{border-top:none}.modal img{float:center}.list-group-item{background-color:initial;border:0}@media screen and (max-width:320px){body{width:min-content}}
+#modalContainer,
+.btn-secondary,
+.welcome-message,
+h1 {
+    text-align: center
+}
+
+:root {
+    --black: #000;
+    --white: #fff;
+    --red: #de1f0d;
+    --orange: #ff3b21;
+    --yellow: #f5c802;
+    --lightYellow: #f7de4f;
+    --grey: #d3cfd4
+}
+
+.heading {
+    margin-right: auto
+}
+
+body {
+    font-family: "Averia Sans Libre";
+    font-weight: 300;
+    background-image: url(../img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--lightYellow);
+    background-position: 200px;
+    background-attachment: fixed
+}
+
+button.btn.btn-primary {
+    visibility: hidden
+}
+
+.btn-secondary {
+    background-color: var(--red);
+    width: 100%;
+    border-radius: 1.1875rem;
+    padding: 2em 7em;
+    cursor: pointer;
+    color: var(--black);
+    min-width: 20em
+}
+
+.btn-secondary:focus,
+.btn-secondary:hover {
+    transition-duration: .8s;
+    transition-property: background-color, transform;
+    filter: brightness(180%);
+    outline-style: none
+}
+
+button.close {
+    outline-style: none
+}
+
+.btn-outline-success {
+    color: var(--red);
+    border-color: var(--black);
+    background-color: var(--grey)
+}
+
+.btn-outline-success:focus,
+.btn-outline-success:hover {
+    background-color: var(--red);
+    border-color: var(--black)
+}
+
+.welcome-box {
+    display: flex;
+    flex-direction: column;
+    background: var(--grey);
+    outline: 2px solid var(--black);
+    padding: 2em
+}
+
+.welcome-image {
+    align-self: center;
+    height: 70%;
+    width: 25%
+}
+
+.welcome-message {
+    font-size: 1.2em
+}
+
+.modal-header {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row-reverse;
+    border-bottom: 2px solid var(--red)
+}
+
+.modal-dialog {
+    background: 0 0
+}
+
+.modal-content {
+    background: var(--lightYellow);
+    border-color: var(--red)
+}
+
+.modal-footer {
+    border-top: none
+}
+
+.modal img {
+    float: center
+}
+
+.list-group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap
+}
+
+.list-group-item {
+    background-color: initial;
+    border: 0
+}
+
+@media screen and (max-width:320px) {
+    body {
+        width: min-content
+    }
+}
+
+@media screen and (min-width:1024px) and (max-width:1024px) and (min-height:821px) and (max-height:821px) {
+    body {
+        background-position: center
+    }
+}

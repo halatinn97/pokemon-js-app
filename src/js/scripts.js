@@ -142,24 +142,29 @@ let pokemonRepository = (function () {
     ul = document.querySelector('.list-group');
     li = ul.getElementsByTagName('li');
 
+    // If the search bar is empty, display all Pokemon
     if (input.value.length === 0) {
       for (i = 0; i < li.length; i++) {
         li[i].style.display = 'block';
       }
-    }
+    } else {
 
-    // Find / hide results
-    for (i = 0; i < li.length; i++) {
-      a = li[i].getElementsByTagName('button')[0];
-      txtValue = a.textContent || a.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        li[i].style.display = '';
-      } else {
-        li[i].style.display = 'none';
+      // Find / hide results
+      for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName('button')[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          li[i].style.display = '';
+        } else {
+          li[i].style.display = 'none';
+        }
       }
     }
-
   }
+
+  // Add an event listener to the search bar input element
+  document.getElementById('search-bar').addEventListener('input', searchFunction);
+
 
 
   //Returns all necessary functions
